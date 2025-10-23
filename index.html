@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#home">
-                <img src="images/logo.jpeg" alt="General Cleaning Logo" width="70" class="d-inline-block">
+                <img src="images/logo.jpeg" alt="General Cleaning Logo" height="70" class="d-inline-block">
                 <span class="ms-2 fw-bold text-primary">General Cleaning</span>
             </a>
             
@@ -48,11 +48,12 @@
         </div>
     </nav>
 
-    <header class="py-5" id="home">
+    <header class="py-5 bg-light" id="home">
         <div class="container text-center">
             <h1 class="display-4 text-primary">Limpeza Profissional de Estofados</h1>
             <p class="lead text-muted">Deixe seus sofás, tapetes, poltronas e bancos de carro como novos!</p>
-            <a href="https://wa.me/31988977888" target="_blank" class="btn btn-success btn-lg mt-3">
+            
+            <a href="https://wa.me/31988977888?text=Olá!%20vim%20Gostaria%20de%20solicitar%20um%20orçamento" target="_blank" class="btn btn-primary btn-lg mt-3">
                 <i class="bi bi-whatsapp"></i> Peça um Orçamento via WhatsApp
             </a>
         </div>
@@ -128,7 +129,7 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <img src="images/depois.jpeg"card-img-top" alt="Serviço Depois">
+                                <img src="images/depois.jpeg" class="card-img-top" alt="Serviço Depois">
                                 <div class="card-body text-center py-2">
                                     <span class="badge bg-success fs-6">Depois</span>
                                 </div>
@@ -146,38 +147,73 @@
     <section id="testimonials" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5 text-primary">Feedback dos Clientes</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>"Serviço impecável! Meu sofá, que eu achava que estava perdido, ficou parecendo novo. Recomendo muito!"</p>
-                                <footer class="blockquote-footer mt-2">Maria S.</footer>
-                            </blockquote>
+
+            <div id="carouselFeedback" class="carousel slide" data-bs-ride="carousel">
+                
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselFeedback" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselFeedback" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselFeedback" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner pb-4"> 
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="col-lg-8 col-md-10"> 
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0 text-center">
+                                            <p>"Serviço impecável! Meu sofá, que eu achava que estava perdido, ficou parecendo novo. Recomendo muito!"</p>
+                                            <footer class="blockquote-footer mt-2">Maria S.</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>"Profissionalismo nota 10. Limparam os bancos do meu carro e removeram um cheiro forte de cigarro. Excelente."</p>
-                                <footer class="blockquote-footer mt-2">João P.</footer>
-                            </blockquote>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0 text-center">
+                                            <p>"Profissionalismo nota 10. Limparam os bancos do meu carro e removeram um cheiro forte de cigarro. Excelente."</p>
+                                            <footer class="blockquote-footer mt-2">João P.</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>"Rápidos, eficientes e o tapete da minha sala ficou com as cores vivas novamente. Ótimo custo-benefício."</p>
-                                <footer class="blockquote-footer mt-2">Ana L.</footer>
-                            </blockquote>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0 text-center">
+                                            <p>"Rápidos, eficientes e o tapete da minha sala ficou com as cores vivas novamente. Ótimo custo-benefício."</p>
+                                            <footer class="blockquote-footer mt-2">Ana L.</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeedback" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselFeedback" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </div>
+
         </div>
     </section>
 
@@ -186,18 +222,15 @@
             <h3 class="mb-3">Entre em Contato</h3>
             <p>Siga-nos nas redes sociais e envie uma mensagem!</p>
             <div class="mb-3">
-                <a href="https://www.instagram.com/general_cleaning2022?igsh=MWZtdWJnMjZnd3JwYg==" target="_blank" class="text-white me-3 fs-3">
+                <a href="https://www.instagram.com/general_cleaning2022?igsh=MWZtdWJnMjZnd3JwYg==" target="blank" class="text-white me-3 fs-3">
                     <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://wa.me/31988977888" target="_blank" class="text-white fs-3">
-                    <i class="bi bi-whatsapp"></i>
                 </a>
             </div>
             <p class="mb-0">&copy; 2025 General Cleaning. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/31988977888" class="whatsapp-float" target="_blank" title="Fale Conosco pelo WhatsApp">
+    <a href="https://wa.me/31988977888?text=gostaria%20de%20solicitar%20um%20orçamento" class="whatsapp-float" target="_blank" title="Fale Conosco pelo WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 

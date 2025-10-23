@@ -1,26 +1,46 @@
 /* Importação de uma fonte bonita (Opcional) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-/* Define a paleta de cores (Azul e Branco) */
+/* -----------------------------------------
+   Paleta de cores profissional
+   -----------------------------------------
+*/
 :root {
-    /* Este é o azul principal do Bootstrap, mas pode trocar */
-    --bs-primary: #0d6efd; 
-    --bs-primary-rgb: 13, 110, 253;
+    --bs-primary: #003366; /* Azul Escuro */
+    --bs-primary-rgb: 0, 51, 102;
+    --bs-light: #e6f0ff;   /* Azul Claro */
+    --bs-light-rgb: 230, 240, 255;
+    --whatsapp-green: #25d366;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Habilita o scroll suave ao clicar nos links do menu */
 html {
     scroll-behavior: smooth;
 }
 
-/* Ajusta o espaçamento do "sticky-top" navbar */
-body { 
-    padding-top: 70px; 
+/* -----------------------------------------
+   ATUALIZAÇÃO FINAL: Altura da barra de navegação
+   Ajustada para uma logo de 50px de altura.
+   -----------------------------------------
+*/
+.navbar {
+    /* Padding mínimo para ficar justo na logo */
+    padding-top: 0.25rem !important; 
+    padding-bottom: 0.25rem !important; 
 }
+
+/* Ajusta o espaçamento do body para a nova altura da navbar */
+body { 
+    /* Nova altura: 50px da logo + ~8px de padding total */
+    padding-top: 58px; 
+}
+/* -----------------------------------------
+   Fim da Atualização
+   -----------------------------------------
+*/
 
 /* Cor dos links do menu */
 .navbar-nav .nav-link {
@@ -30,10 +50,10 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #0a58ca !important; /* Um azul mais escuro no hover */
+    color: #007bff !important; 
 }
 
-/* Define o fundo azul do rodapé */
+/* Define o fundo do rodapé */
 footer {
     background-color: var(--bs-primary);
 }
@@ -45,7 +65,7 @@ footer {
     height: 60px;
     bottom: 40px;
     right: 40px;
-    background-color: #25d366; /* Verde do WhatsApp */
+    background-color: var(--whatsapp-green);
     color: #FFF;
     border-radius: 50px;
     text-align: center;
@@ -61,36 +81,56 @@ footer {
 }
 
 .whatsapp-float i {
-    margin-top: 15px; /* Centraliza o ícone verticalmente */
+    margin-top: 15px; 
 }
 
-/* Garante que as imagens do "Antes e Depois" tenham o mesmo tamanho */
-#portfolio .card-img-top {
-    aspect-ratio: 1 / 1; /* Proporção 1:1 (quadrada) */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-}
-/* -----------------------------------------
-   CORREÇÃO: Torna o nome do cliente 
-   no feedback mais visível.
-   -----------------------------------------
-*/
-#testimonials .blockquote-footer {
-    color: #495057; /* Um cinza escuro para dar contraste */
-}
-/* -----------------------------------------
-   CORREÇÃO: Garante que as imagens "Antes e Depois" 
-   mantenham uma proporção e tamanho consistentes.
-   -----------------------------------------
-*/
+/* Estilo: Imagens "Antes e Depois" */
 #portfolio .card .col-6 img {
-    width: 100%; /* Garante que a imagem preencha o espaço da coluna */
-    height: 250px; /* Altura fixa para todas as imagens neste contexto */
-    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
 }
 
-/* Para telas menores (celulares), ajuste a altura se necessário */
 @media (max-width: 767.98px) {
     #portfolio .card .col-6 img {
-        height: 180px; /* Um pouco menor em telas muito pequenas */
+        height: 180px; 
     }
+}
+
+/* Estilo: Nome do cliente no feedback */
+#testimonials .blockquote-footer {
+    color: #f8f9fa; /* Branco suave */
+    font-style: italic; 
+}
+
+#testimonials .blockquote-footer::before {
+    content: "— "; 
+}
+
+/* Estilo: Carrossel de Feedback */
+
+/* Força os indicadores (bolinhas) a serem CINZA */
+#testimonials .carousel-indicators [data-bs-target] {
+    background-color: #6c757d !important; 
+}
+
+/* Força o indicador ATIVO a ser um cinza mais escuro */
+#testimonials .carousel-indicators .active {
+    background-color: #343a40 !important; 
+}
+
+/* Força as setas a serem escuras */
+#testimonials .carousel-control-prev-icon,
+#testimonials .carousel-control-next-icon {
+    filter: invert(1) grayscale(100) brightness(50%) !important;
+}
+
+/* Card de depoimento (Fundo azul escuro e texto branco) */
+#testimonials .carousel-item .card {
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bs-primary); /* Fundo Azul Escuro */
+    color: #FFF; /* Texto principal (depoimento) branco */
 }
