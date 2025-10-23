@@ -69,3 +69,28 @@ footer {
     aspect-ratio: 1 / 1; /* Proporção 1:1 (quadrada) */
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
+/* -----------------------------------------
+   CORREÇÃO: Torna o nome do cliente 
+   no feedback mais visível.
+   -----------------------------------------
+*/
+#testimonials .blockquote-footer {
+    color: #495057; /* Um cinza escuro para dar contraste */
+}
+/* -----------------------------------------
+   CORREÇÃO: Garante que as imagens "Antes e Depois" 
+   mantenham uma proporção e tamanho consistentes.
+   -----------------------------------------
+*/
+#portfolio .card .col-6 img {
+    width: 100%; /* Garante que a imagem preencha o espaço da coluna */
+    height: 250px; /* Altura fixa para todas as imagens neste contexto */
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+}
+
+/* Para telas menores (celulares), ajuste a altura se necessário */
+@media (max-width: 767.98px) {
+    #portfolio .card .col-6 img {
+        height: 180px; /* Um pouco menor em telas muito pequenas */
+    }
+}
