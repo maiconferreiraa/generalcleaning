@@ -1,0 +1,71 @@
+/* Importação de uma fonte bonita (Opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Define a paleta de cores (Azul e Branco) */
+:root {
+    /* Este é o azul principal do Bootstrap, mas pode trocar */
+    --bs-primary: #0d6efd; 
+    --bs-primary-rgb: 13, 110, 253;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Habilita o scroll suave ao clicar nos links do menu */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ajusta o espaçamento do "sticky-top" navbar */
+body { 
+    padding-top: 70px; 
+}
+
+/* Cor dos links do menu */
+.navbar-nav .nav-link {
+    color: var(--bs-primary) !important;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0a58ca !important; /* Um azul mais escuro no hover */
+}
+
+/* Define o fundo azul do rodapé */
+footer {
+    background-color: var(--bs-primary);
+}
+
+/* Estilo do Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366; /* Verde do WhatsApp */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+.whatsapp-float i {
+    margin-top: 15px; /* Centraliza o ícone verticalmente */
+}
+
+/* Garante que as imagens do "Antes e Depois" tenham o mesmo tamanho */
+#portfolio .card-img-top {
+    aspect-ratio: 1 / 1; /* Proporção 1:1 (quadrada) */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
