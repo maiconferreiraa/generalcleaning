@@ -22,20 +22,17 @@ html {
 }
 
 /* -----------------------------------------
-   ATUALIZAÇÃO FINAL: Altura da barra de navegação
-   Ajustada para uma logo de 50px de altura.
+   Altura da barra de navegação
    -----------------------------------------
 */
 .navbar {
-    /* Padding mínimo para ficar justo na logo */
     padding-top: 0.25rem !important; 
     padding-bottom: 0.25rem !important; 
 }
 
 /* Ajusta o espaçamento do body para a nova altura da navbar */
 body { 
-    /* Nova altura: 50px da logo + ~8px de padding total */
-    padding-top: 58px; 
+    padding-top: 58px; /* Ajustado para uma logo de 50px de altura */
 }
 /* -----------------------------------------
    Fim da Atualização
@@ -107,7 +104,10 @@ footer {
     content: "— "; 
 }
 
-/* Estilo: Carrossel de Feedback */
+/* -----------------------------------------
+   Estilo: Carrossel de Feedback
+   -----------------------------------------
+*/
 
 /* Força os indicadores (bolinhas) a serem CINZA */
 #testimonials .carousel-indicators [data-bs-target] {
@@ -119,12 +119,6 @@ footer {
     background-color: #343a40 !important; 
 }
 
-/* Força as setas a serem escuras */
-#testimonials .carousel-control-prev-icon,
-#testimonials .carousel-control-next-icon {
-    filter: invert(1) grayscale(100) brightness(50%) !important;
-}
-
 /* Card de depoimento (Fundo azul escuro e texto branco) */
 #testimonials .carousel-item .card {
     min-height: 180px;
@@ -133,4 +127,46 @@ footer {
     align-items: center;
     background-color: var(--bs-primary); /* Fundo Azul Escuro */
     color: #FFF; /* Texto principal (depoimento) branco */
+}
+
+/* -----------------------------------------
+   NOVO: Estilos para o Carrossel "Antes e Depois"
+   (Indicadores cinzas)
+   -----------------------------------------
+*/
+/* Força os indicadores (bolinhas) a serem CINZA */
+#portfolio .carousel-indicators [data-bs-target] {
+    background-color: #6c757d !important; /* Cinza-médio */
+}
+
+/* Força o indicador ATIVO a ser um cinza mais escuro */
+#portfolio .carousel-indicators .active {
+    background-color: #343a40 !important; 
+}
+
+
+/* -----------------------------------------
+   ATUALIZAÇÃO: Setas do Carrossel em Azul Escuro
+   (Aplica-se a AMBOS os carrosséis)
+   -----------------------------------------
+*/
+
+/* Remove o filtro antigo que deixava as setas cinzas */
+#portfolio .carousel-control-prev-icon,
+#portfolio .carousel-control-next-icon,
+#testimonials .carousel-control-prev-icon,
+#testimonials .carousel-control-next-icon {
+    filter: none !important;
+}
+
+/* Seta "Anterior" (Esquerda) em Azul Escuro */
+.carousel-control-prev-icon {
+    /* SVG Padrão do Bootstrap com a cor 'fill' trocada para #003366 */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23003366'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+}
+
+/* Seta "Próximo" (Direita) em Azul Escuro */
+.carousel-control-next-icon {
+    /* SVG Padrão do Bootstrap com a cor 'fill' trocada para #003366 */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23003366'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
 }
